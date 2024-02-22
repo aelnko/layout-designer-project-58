@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --white: #fff;
+  --translucent: #d7ccc0;
+  --light: #f5f4f0;
+  --basic: #fe8a02;
+  --dark-basic: #42413c;
+  --dark: #2a2626;
+  --translucent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+  --title: "Neucha", cursive;
+  --main-font: "Open Sans", sans-serif;
+  --font-size: 16px;
+  --line-height: 1.6em;
+  --color: #2A2626;
+  --title-lh: 1.2em;
+  --h1-size: 72px;
+  --h2-size: 60px;
+  --h3-size: 34px;
+  --background-image: url("../img/background.png");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  position: relative;
+  line-height: var(--line-height);
+}
+
+body::before {
+  
+}
+
+.orange-text {
+  color: var(--basic);
+}
+
+/* header */
+
+.header {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 100px;
+  z-index: 0;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/main.png");
+  width: 100%;
+  height: 525px;
+  left: 500px;
+  top: 55px;
+  z-index: -1;
+}
+
+.header__title {
+  font-family: var(--title);
+  font-size: var(--h1-size);
+  line-height: var(--title-lh);
+  font-weight: normal;
+  margin: 0 auto;
+  width: 1110px;
+}
+
+.header__text-wrapper {
+  display: flex;
+  width: 1110px;
+  margin: 240px auto 40px auto;
+  justify-content: space-between;
+}
+
+.header__paragraph {
+  font-size: var(--font-size);
+  width: 540px;
+}
+
+.header__button {
+  border: none;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  background-color: var(--basic);
+  color: var(--white);
+  font-weight: bold;
+  margin-left: 775px;
+  cursor: pointer;
+}
